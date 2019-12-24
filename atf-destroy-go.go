@@ -256,15 +256,10 @@ func GetInfoAboutUnprotectedInstances()([]string,string,int){
 	if err != nil {
 		fmt.Println("Error", err)
 	} else {
-		//fmt.Println(result1.Reservations)
 		Branch := "Branch"
 		Name := "Name"
 		for idx := range result1.Reservations {
-			//fmt.Println(idx)
 			for _, inst := range result1.Reservations[idx].Instances {
-				//fmt.Println(len(result1.Reservations))
-				//if *inst.Tags
-				//fmt.Println(inst.Tags[0].)
 				InstanceTags = make(map[string]string)
 				for _,tag_value := range(inst.Tags){
 
@@ -280,31 +275,8 @@ func GetInfoAboutUnprotectedInstances()([]string,string,int){
 
 
 
-					//fmt.Println(i,tag_value)
-					//if *inst.State.Name != "terminated" && *tag_value.Key == "instance-termination-mode" {
-
-						//split_string := strings.Split(*tag_value.Value,"-")
-						//deployment_id = split_string[len(split_string)-1]
-						//if *tag_value.V == "none" || *tag_value.Value == "preserve" {
-						//
-						//if(strings.Contains(deployment_id,){
-						//	if *inst.State.Name != "terminated"{
-						//		fmt.Println(*inst)
-						//		SubnetToTerminate = *inst.SubnetId
-						//		PrivateIPAdd = *inst.PrivateIpAddress
-						//		InstancesToTerminate = append(InstancesToTerminate,*inst.InstanceId)
-						//	}}}
-					//}
 				}
 
-			//for key,value := range InstanceTags {
-			//	//fmt.Println(key,value)
-			//
-			//	if key == "Branch" && value == "master"{
-			//		Name := "Name"
-			//		fmt.Println(InstanceTags[Name])
-			//
-			//	}
 
 			}
 
